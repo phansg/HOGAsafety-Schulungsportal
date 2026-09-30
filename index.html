@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOGAsafety Schulungsportal Web</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="loading" class="loading"><div class="spinner"></div><span>HOGAsafety wird geladen …</span></div>
+<main class="shell">
+  <section id="loginView" class="login-card">
+    <img src="assets/img/hogasafety-logo.png" class="logo" alt="HOGAsafety">
+    <h1>Schulungsportal Web</h1>
+    <p class="muted">Sicher anmelden und Schulungen zentral verwalten.</p>
+    <form id="loginForm">
+      <label>E-Mail<input id="email" type="email" autocomplete="username" required></label>
+      <label>Passwort<input id="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Anmelden</button>
+    </form>
+    <div id="loginError" class="error" hidden></div>
+  </section>
+
+  <section id="appView" class="app" hidden>
+    <header class="topbar">
+      <div class="brand"><img src="assets/img/hogasafety-logo.png" alt=""><div><strong>Schulungsportal Web</strong><small>V0.1 · Technisches Grundsystem</small></div></div>
+      <button id="logoutBtn" class="secondary">Abmelden</button>
+    </header>
+    <div id="accessError" class="error panel" hidden></div>
+    <section id="dashboard" hidden>
+      <div class="welcome"><div><span class="eyebrow">HOGAsafety</span><h2>Willkommen, <span data-user></span></h2><p data-company></p></div><span class="badge" data-role></span></div>
+      <div class="cards">
+        <article><span class="icon">✓</span><h3>Meine Schulungen</h3><p>Wird ab V0.4 mit den persönlichen Schulungszuweisungen verbunden.</p><button disabled>Vorbereitet</button></article>
+        <article data-manager-card><span class="icon">👥</span><h3>Mitarbeiter</h3><p>Benutzer- und Mitarbeiterstruktur folgt in V0.2.</p><button disabled>Vorbereitet</button></article>
+        <article data-admin-card><span class="icon">▦</span><h3>Administration</h3><p>Bereiche und Schulungen werden schrittweise freigeschaltet.</p><button disabled>Vorbereitet</button></article>
+      </div>
+      <div class="status-panel">
+        <h3>V0.1 Sicherheitsprüfung</h3>
+        <div class="checks">
+          <span>✓ Firebase Authentication</span><span>✓ HOGAsafety-Mandant</span><span>✓ Kunden-Zuordnung</span><span>✓ Aktive Produktlizenz</span><span>✓ Rollenrouting</span>
+        </div>
+        <p>Fachliche Schulungsdaten bleiben in V0.1 absichtlich gesperrt.</p>
+      </div>
+    </section>
+  </section>
+</main>
+<script type="module" src="assets/js/app.js"></script>
+</body></html>
